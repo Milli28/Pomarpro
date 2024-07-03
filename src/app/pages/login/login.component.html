@@ -1,0 +1,19 @@
+<div class="fundo">
+    <section class="login">
+        <header>
+            <img src="/assets/img/pomar camilli.png">
+        </header>
+        <form [formGroup]="form">
+            <input text placeholder="Usuário" formControlName="usuario">
+            <input password placeholder="Senha" formControlName="senha">
+            <p class="erro">{{msg_erro}}</p>
+            <button (click)="onLogin()">Entrar</button>
+        </form>
+        <footer>
+            <p>Desenvolvido por Camilli V. Tomazi</p>
+        </footer>
+    </section>
+    <div class="image">
+    
+    </div>
+</div>
