@@ -1,0 +1,52 @@
+<app-menu></app-menu>
+<div class="pagina">
+  <header>
+    <h1>Produtos</h1>
+  </header>
+  <form [formGroup]="formulario">
+    <div>
+      <mat-form-field appearance="outline" color="accent">
+        <mat-label>Descrição</mat-label>
+        <input matInput formControlName="descricao"/>
+      </mat-form-field>
+      <mat-form-field appearance="outline" color="accent">
+        <mat-label>Unidade de Medida</mat-label>
+        <input matInput formControlName="unidade_medida"/>
+      </mat-form-field>
+      <mat-form-field appearance="outline" color="accent" class="grande">
+        <mat-label>Valor</mat-label>
+        <input matInput formControlName="valor"/>
+      </mat-form-field>
+      <mat-form-field appearance="outline" color="accent" class="grande">
+        <mat-label>Tipo</mat-label>
+        <input matInput formControlName="tipo"/>
+      </mat-form-field>
+      <div class="controles">
+        <button mat-raised-button color="accent" [disabled]="formulario.enabled" (click)="onIncluir()">Incluir</button>
+        <button mat-raised-button color="accent" [disabled]="formulario.invalid" (click)="onSalvar()">Salvar</button>
+        <button mat-raised-button color="accent" [disabled]="formulario.disabled" (click)="onCancelar()">Cancelar</button>
+    </div>
+<form>
+    <div>
+        <div class="relatorio">
+          <h2>Produtos cadastrados</h2>
+          <table>
+           <tr>
+             <th>Ação</th>
+             <th>Descrição</th>
+             <th>Unidade de Medida</th>
+             <th>valor</th>
+             <th>Tipo</th>
+           </tr>
+           <tr *ngFor="let produto of relatorio">
+             <td><button>Excluir</button></td>
+             <td>{{produto.descricao}}</td>
+             <td>{{produto.unidade_medida}}</td>
+             <td>{{produto.valor}}</td>
+             <td>{{produto.tipo}}</td>
+           </tr>
+          </table>
+       </div>
+      </div>
+        
+      

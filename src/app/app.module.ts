@@ -15,6 +15,14 @@ import {MatFormFieldModule} from '@angular/material/form-field'
 import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
 import { MatSnackBarModule} from '@angular/material/snack-bar';
+import { MatCheckboxModule} from '@angular/material/checkbox';
+import { MatDatepickerModule} from '@angular/material/datepicker';
+import { MaterialComponent } from './material/material.component';
+import { ProdutoComponent } from './produto/produto.component';
+import { CadastroComponent } from './cadastro/cadastro.component';
+import { MovimentoComponent } from './movimento/movimento.component';
+import { ColheitaComponent } from './colheita/colheita.component';
+import { MAT_DATE_LOCALE, provideNativeDateAdapter } from '@angular/material/core';
 
 
 
@@ -25,7 +33,12 @@ import { MatSnackBarModule} from '@angular/material/snack-bar';
     LoginComponent,
     HomeComponent,
     MenuComponent,
-    CadUsuarioComponent
+    CadUsuarioComponent,
+    MaterialComponent,
+    ProdutoComponent,
+    CadastroComponent,
+    MovimentoComponent,
+    ColheitaComponent
   ],
   imports: [
     BrowserModule,
@@ -35,9 +48,11 @@ import { MatSnackBarModule} from '@angular/material/snack-bar';
     MatFormFieldModule,
     MatInputModule,
     MatButtonModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatCheckboxModule,
+    MatDatepickerModule
   ],
-  providers: [provideHttpClient(), provideAnimationsAsync()],
+  providers: [provideHttpClient(), provideAnimationsAsync(),provideNativeDateAdapter(),{provide:MAT_DATE_LOCALE,useValue:'pt-BR'}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

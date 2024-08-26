@@ -5,22 +5,23 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class UsuarioService {
+export class MaterialService {
 
   constructor(private http:HttpClient) { }
 
-  public addUsuario(info:any):Observable<any>{
-    return this.http.post('http://localhost:3000/usuario/add',
+  public addMaterial(info:any):Observable<any>{
+    return this.http.post('http://localhost:3000/material/add',
       {info},
       {observe:'response'}
     )
   }
 
   //Função de busca de usuários
-  public getUsuarios():Observable<any>{
-    return this.http.get('http://localhost:3000/usuario/buscaTodos',
+  public getMateriais():Observable<any>{
+    return this.http.get('http://localhost:3000/material/buscaTodos',
       {observe:'response'}
     )
   
-  }
+
+}
 }
