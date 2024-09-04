@@ -1,0 +1,50 @@
+header {
+  height: 15vh;
+  h1 {
+    font-size: 2.5em;
+    font-family: "Constantia";
+  }
+}
+
+.relatorio {
+  width: 100%;
+  height: auto;
+  padding-top: 10px;
+
+  table {
+    min-width: 50%;
+    text-align: center;
+    font-family: arial;
+    margin: 0 auto;
+    border-collapse: collapse;
+    border: 2px black solid;
+    font-size: 1.5em;
+    .titulo {
+      background: linear-gradient(to right, #f8e356, #ff4f8b, #e3b1f6);
+    }
+    th {
+      padding: 3px;
+      text-align: left;
+      text-align: center;
+    }
+    td {
+      padding: 3px;
+    }
+  }
+}
+.imagem {
+  position: absolute;
+  right: 3vw;
+  bottom: 3vh;
+}
+
+.baixo{
+  bottom:-3vw;
+  right: 10vw;
+}
+
+.esquerda{
+  position: absolute;
+  left:12vw;
+  bottom: -5vh;
+}
