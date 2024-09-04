@@ -1,2 +1,25 @@
-
 <app-menu></app-menu>
+<div class="pagina">
+  <header>
+    <h1>Estoque</h1>
+  </header>
+  <div class="relatorio">
+    <table>
+     <tr class="titulo">
+       <th>Descrição</th>
+       <th>Quantidade</th>
+     </tr>
+     <tr *ngFor="let home of relatorio">
+       <td>{{home.descricao}}</td>
+       <td>{{home.quantidade}}</td>
+     </tr>
+    </table>
+ </div>
+  
+</div>
+
+
+<img class="imagem" src="assets/img/meninatangerina.png">
+<img class="imagem baixo" src="assets/img/gatinhofofo.png">
+<img class="imagem esquerda" src="assets/img/tangerina.png">
+  
